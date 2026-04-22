@@ -14,6 +14,8 @@ app.use('/api/entries', require('./routes/diaryRoutes'));
 
 app.use('/api/animal', require('./routes/animalRoutes'));
 
+app.use('/api/consulta', require('./routes/consultaRoutes'));
+
 mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/pet_diary')
   .then(() =>
     app.listen(process.env.PORT || 3000, () =>
